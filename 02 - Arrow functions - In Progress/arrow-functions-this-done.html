@@ -55,27 +55,29 @@
 
   <div class="wrap">
     <div class="box">
-      <h2>Wes Bos</h2>
-      <p class="social">@wesbos</p>
+      <h2>Mun...</h2>
+      <p class="social">@quangnd</p>
     </div>
   </div>
 
   <script>
-      const box = document.querySelector('.box');
-      box.addEventListener('click', function() {
-        let first = 'opening';
-        let second = 'open';
+    const box = document.querySelector('.box');
+   
+    box.addEventListener('click', function() => {
+      console.log(this); //with function() this is box object buton with arrow function this is Window object
+      let first = 'opening';
+      let second = 'open';
 
-        if(this.classList.contains(first)) {
-          // switch them
-          [first, second] = [second, first];
-        }
-
-        this.classList.toggle(first);
-        setTimeout(() => {
-          this.classList.toggle(second);
-        }, 250);
-      });
+      if (this.classList.contains(first)) {
+        //switch them
+        [first, second] = [second, first];
+      }
+  
+      this.classList.toggle(first);
+      setTimeout(() => {
+        this.classList.toggle(second);
+      }, 500)
+    })
   </script>
 
 </body>
